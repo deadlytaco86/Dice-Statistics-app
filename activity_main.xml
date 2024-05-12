@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/diceEntryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:text="Number of Dice:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callEntryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Current Call:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/diceEntryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/diceEntryLabel" />
+
+    <TextView
+        android:id="@+id/displayLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/diceEntryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/callEntryLabel"
+        tools:text="chance of Call:" />
+
+    <TextView
+        android:id="@+id/displayLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/diceEntryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/displayLabel1"
+        tools:text="chance of Call +1:" />
+
+    <TextView
+        android:id="@+id/displayLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/diceEntryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/displayLabel2"
+        tools:text="chance of Call +2:" />
+
+    <TextView
+        android:id="@+id/displayWindow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/displayLabel1"
+        app:layout_constraintTop_toBottomOf="@+id/callEntryLabel"
+        tools:text="probability" />
+
+    <TextView
+        android:id="@+id/displayWindow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/displayWindow1"
+        app:layout_constraintTop_toBottomOf="@+id/displayWindow1"
+        tools:text="probability +1" />
+
+    <TextView
+        android:id="@+id/displayWindow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/displayWindow2"
+        app:layout_constraintTop_toBottomOf="@+id/displayWindow2"
+        tools:text="probability +2" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Not Guaranteed To Help You Win"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/diceDown"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toEndOf="@+id/diceEntryLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/diceUp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/diceDown"
+        app:layout_constraintStart_toEndOf="@+id/diceDown"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <TextView
+        android:id="@+id/diceDisplayLabel"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="77dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/diceEntryLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/callDisplayLabel"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="137dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/callEntryLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="99" />
+
+    <ImageButton
+        android:id="@+id/callDown"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintStart_toEndOf="@+id/callEntryLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/callUp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/callDown"
+        app:layout_constraintStart_toEndOf="@+id/callDown"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
